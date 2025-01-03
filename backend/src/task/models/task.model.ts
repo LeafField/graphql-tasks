@@ -24,3 +24,9 @@ export class Task {
   @Field()
   updatedAt: Date;
 }
+
+@ObjectType()
+export class Tasks {
+  @Field(() => [Task], { nullable: true })
+  data: Task[];
+}
